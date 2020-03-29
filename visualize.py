@@ -5,13 +5,6 @@ import plotly.graph_objects as go
 from ipywidgets import widgets
 
 
-def normalize(column):
-    """
-    Used to normalize time column.
-    """
-    return (column - column.mean()) / column.var()
-
-
 df = pd.read_csv('IPIP-FFM-data-8Nov2018/data-final.csv', sep='\t')
 scales = ['EXT', 'AGR', 'CSN', 'EST', 'OPN']
 labels = ['Extraversion', 'Agreeableness', 'Conscientiousness', \
